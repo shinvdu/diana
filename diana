@@ -11,9 +11,14 @@ from urllib.error import URLError, HTTPError
 from subprocess import check_call
 from getopt import getopt
 
+# import pydevd
+# pydevd.settrace('localhost', port=11222, stdoutToServer=True, stderrToServer=True)
+#
 MAX_NAME_LEN = 50
 ELLIPSIS = '...'
-HOST = os.getenv('DIANA_HOST', 'localhost')
+# HOST = os.getenv('DIANA_HOST', 'localhost')
+HOST = '192.168.255.10'
+
 PORT = os.getenv('DIANA_PORT', '6800')
 PREVIEW_COMMAND = os.getenv('DIANA_PREVIEW_COMMAND', 'open')
 INFO_COMMAND = os.getenv('DIANA_INFO_COMMAND', 'file')
